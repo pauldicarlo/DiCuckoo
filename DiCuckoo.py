@@ -52,10 +52,10 @@ if __name__ == '__main__':
 	clockFace  = ClockFace(clockFaceFile, clock_center, screen)
 	
 	pygame.font.init()
-	#myfont = pygame.font.SysFont("fixed", 50)
-	myfont = pygame.font.Font("a_Allgidus.ttf", 24)
-			
-
+	myfont1 = pygame.font.SysFont("Times", 24)
+	myfont2 = pygame.font.SysFont("Times", 36)
+	#myfont = pygame.font.Font("a_Allgidus.ttf", 24)
+	
 
 	
 	secondHand = ClockHand(handsSecondsFile, - 6,  0, clockFace)
@@ -79,8 +79,11 @@ if __name__ == '__main__':
 			screen.blit(clockFace.faceSurface, (0,0))
 			
 			# render text
-			label = myfont.render("www.DiCarloAndSons.com", 100, (0,0,0))
-			screen.blit(label, (clock_center - label.get_width()/2, clock_center/2))
+			label = myfont2.render("DiCuckoo", 110, (0,0,0))
+			screen.blit(label, (clock_center - label.get_width()/2, clock_center/2-45))
+			plug = myfont1.render("www.DiCarloAndSons.com", 100, (0,0,0))
+			screen.blit(plug, (clock_center - plug.get_width()/2, clock_center/2))
+			
 			
 			rotateHand(hourHand,   now.hour,   -(now.minute//hourHand.subRotationAngle))
 			rotateHand(minuteHand, now.minute, -(now.second//minuteHand.subRotationAngle))
