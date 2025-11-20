@@ -13,3 +13,10 @@ For more information, see:  http://dicarloandsons.blogspot.com/search/label/DiCu
 
 
 ![](https://4.bp.blogspot.com/-yljHn_hk-Qg/Wcap8oYZLTI/AAAAAAAAMg8/_oNd6lcr8E8bqU0MJcm1hVxlU3rC0Xl1wCLcBGAs/s1600/ClockWork.png)
+
+Some commands:
+* python3 -m venv .venv
+* source .venv/bin/activate
+* pip3 freeze > requirements.txt
+* pip3 install -r requirements.txt
+* python3 -m pytest
